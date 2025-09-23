@@ -1,0 +1,121 @@
+/* comidasFav.css */
+
+body {
+    background-color: #fff8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #d35400;
+    font-weight: 700;
+}
+
+ul.list-group {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    font-size: 18px;
+    color: #3e3e3e;
+    background-color: #fff;
+    border: 2px solid #f5a623;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Espaço para imagem: você pode colocar a imagem como background ou uma tag <img> no HTML */
+.list-group-item::before {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-right: 15px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Exemplo de imagens diferentes para cada comida */
+/* Troque as URLs pelas suas imagens */
+.list-group-item:nth-child(1)::before {
+    background-image: url('imagens/comida-japonesa.jpg');
+}
+
+.list-group-item:nth-child(2)::before {
+    background-image: url('imagens/pizza.jpg');
+}
+
+.list-group-item:nth-child(3)::before {
+    background-image: url('imagens/lasanha.jpg');
+}
+
+.list-group-item:nth-child(4)::before {
+    background-image: url('imagens/churrasco.jpg');
+}
+
+.list-group-item:nth-child(5)::before {
+    background-image: url('imagens/hamburguer.jpg');
+}
+
+.list-group-item:nth-child(6)::before {
+    background-image: url('imagens/sorvete.jpg');
+}
+
+.list-group-item:nth-child(7)::before {
+    background-image: url('imagens/tacos.jpg');
+}
+
+.list-group-item:nth-child(8)::before {
+    background-image: url('imagens/feijoada.jpg');
+}
+
+/* Destaque para o primeiro item */
+.list-group-item.list-group-item-success {
+    background-color: #f9e7d2;
+    border-color: #d35400;
+    color: #d35400;
+    font-size: 20px;
+}
+
+/* Efeito hover */
+.list-group-item:hover {
+    background-color: #f5a623;
+    color: white;
+    box-shadow: 0 4px 10px rgba(245, 166, 35, 0.5);
+}
+.list-group-item {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  background-color: #f5a623 !important;
+  color: white !important;
+}
+
+.list-group-item img {
+  border: 2px solid #f5a623;
+  transition: transform 0.3s ease;
+}
+
+.list-group-item:hover img {
+  transform: scale(1.1);
+  border-color: white;
+}
+
+p{
+    margin-right: 10px;
+    font-weight: bold;
+    color: #d35400;
+    font-size: 20px;
+    text-align: center;
+}
+
