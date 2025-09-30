@@ -1,0 +1,52 @@
+/* =================== BASE DO TEMA NEON =================== */
+:root {
+  --bg-color: #121212;
+  --card-bg: #1f1f1f;
+  --accent-color: #9D00FF; /* Neon Roxo */
+  --glow-color: rgba(157, 0, 255, 0.5); /* Brilho Roxo */
+  --text-color: #f1f1f1;
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+body {
+  padding-top: 5rem;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* =================== NAVBAR (IGUAL PARA TODOS) =================== */
+.navbar {
+  background-color: #181818 !important;
+  border-bottom: 2px solid var(--glow-color);
+  box-shadow: 0 2px 8px var(--glow-color);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--accent-color) !important;
+  transition: color var(--transition), text-shadow var(--transition);
+}
+
+.nav-link:hover, .navbar-brand:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color);
+}
+
+/* =================== ESTILOS ESPECÍFICOS PARA proFav.html =================== */
+
+.container h1 {
+    color: var(--accent-color);
+    text-shadow: 0 0 8px var(--glow-color);
+}
+
+.container img {
+    border: 3px solid var(--accent-color);
+    border-radius: var(--radius) !important;
+    box-shadow: 0 0 25px var(--glow-color);
+    transition: transform var(--transition);
+}
+.container img:hover {
+    transform: scale(1.03);
+}
