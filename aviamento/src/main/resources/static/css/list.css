@@ -1,0 +1,144 @@
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- BODY ---------- */
+body {
+  background-color: #0a0a0a; /* Preto profundo */
+  color: #e0e0e0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ---------- TÍTULO ---------- */
+h1 {
+  color: #bb86fc; /* Roxo neon */
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 0 0 15px #bb86fc, 0 0 30px #6a1b9a;
+  letter-spacing: 1px;
+}
+
+/* ---------- TABELA ---------- */
+table {
+  width: 90%;
+  max-width: 900px;
+  border-collapse: collapse;
+  background-color: #121212; /* Preto fosco */
+  border: 1px solid #2a005f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(187, 134, 252, 0.2);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+thead {
+  background: linear-gradient(90deg, #2a005f, #4c0099);
+}
+
+th {
+  color: #e0b3ff;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 14px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+tr {
+  transition: all 0.2s ease;
+}
+
+tr:hover {
+  background-color: rgba(187, 134, 252, 0.08);
+  box-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
+}
+
+/* ---------- MENSAGEM VAZIA ---------- */
+td[colspan] {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+  padding: 20px;
+}
+
+/* ---------- LINK CADASTRAR ---------- */
+a {
+  display: inline-block;
+  margin-top: 30px;
+  background: linear-gradient(90deg, #6a1b9a, #bb86fc);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(187, 134, 252, 0.3);
+}
+
+a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(187, 134, 252, 0.6);
+}
+
+/* ---------- EFEITO NEON AO PASSAR O MOUSE ---------- */
+a:hover, tr:hover td {
+  text-shadow: 0 0 8px #bb86fc;
+}
+
+/* ---------- SCROLLBAR PERSONALIZADA ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #6a1b9a;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bb86fc;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    background: #121212;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(187, 134, 252, 0.2);
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border: none;
+  }
+
+  td::before {
+    content: attr(data-label);
+    color: #bb86fc;
+    font-weight: 600;
+  }
+}
