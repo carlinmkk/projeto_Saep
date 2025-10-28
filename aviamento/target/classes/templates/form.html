@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Usuário</title>
+    <link rel="stylesheet" th:href="@{/css/form.css}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cadastrar Usuário</h1>
+
+        <form th:object="${usuario}" th:action="@{/usuario}" method="post" class="form-box">
+
+            <div class="input-group">
+                <label for="nome">Nome</label>
+                <input id="nome" th:field="*{nome}" placeholder="Digite o nome" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" th:field="*{email}" placeholder="Digite o e-mail" required>
+            </div>
+
+            <div class="input-group">
+                <label for="role">Função</label>
+                <select id="role" th:field="*{role}" required>
+                    <option value="" disabled selected>Selecione uma função</option>
+                    <option th:each="r : ${T(com.lojaaviamento.aviamento.model.Role).values()}"
+                            th:value="${r}"
+                            th:text="${r}">
+                    </option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input id="senha" type="password" th:field="*{senha}" placeholder="Digite a senha" required>
+            </div>
+
+            <button type="submit" class="btn">Salvar</button>
+        </form>
+
+        <p><a th:href="@{/usuarios}" class="voltar">← Voltar para a lista</a></p>
+    </div>
+</body>
+</html>
+ 
